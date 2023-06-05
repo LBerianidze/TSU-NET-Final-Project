@@ -1,0 +1,12 @@
+﻿@using DecorationMarket.Controllers;
+@using DecorationMarket.Domain.DBModel;
+@using DecorationMarket.Core.Interface;
+@model List<Category>
+<ul class="nav nav-pills flex-column bg-light p-2">
+    @foreach (var category in Model)
+    {
+        <li class="nav-item text-start">
+            <a class="nav-link text-nowrap" id="@category.Id" asp-controller="Home" asp-action="Index" asp-route-code="@category.Code">@category.Name</a>
+        </li>
+    }
+</ul>

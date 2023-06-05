@@ -1,0 +1,30 @@
+﻿@page
+@model OrdersModel
+@{
+    ViewData["Title"] = "Manage Orders";
+    ViewData["ActivePage"] = ManageNavPages.Orders;
+}
+
+<h3>@ViewData["Title"]</h3>
+
+@foreach (var order in Model.Orders)
+{
+    <div class="col-md-12">
+        <div class="card mb-4 d-flex flex-row">
+            <img src="https://snipboard.io/@order.OrderItems.ElementAt(0).Product.Image.FileName" class="card-img-top" style="max-width: 150px" alt="Product Image" width="50">
+            <div class="card-body">
+                <h5 class="card-title">@order.OrderItems.ElementAt(0).Product.Name</h5>
+                <p class="card-text">
+                    Quantity: @order.OrderItems.ElementAt(0).Quantity<br>
+                    Count: @order.OrderItems.ElementAt(0).TotalPrice<br>
+                    Order Status: @order.OrderStatus
+                </p>
+            </div>
+        </div>
+    </div>
+}
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

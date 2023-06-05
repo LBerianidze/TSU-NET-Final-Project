@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DecorationMarket.Domain\DecorationMarket.Domain.csproj" />
+    <ProjectReference Include="..\DecorationMarket.Persistence\DecorationMarket.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>
